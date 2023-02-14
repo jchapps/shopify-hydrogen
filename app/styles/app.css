@@ -539,6 +539,9 @@ video {
 .font-bold {
   font-weight: 700;
 }
+.font-medium {
+  font-weight: 500;
+}
 .leading-none {
   line-height: 1;
 }
