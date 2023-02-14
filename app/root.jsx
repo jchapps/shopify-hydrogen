@@ -11,6 +11,25 @@ import favicon from '../public/favicon.svg';
 import {Layout} from './components/Layout';
 import {Seo} from '@shopify/hydrogen';
 import {ShopifyProvider} from '@shopify/hydrogen-react';
+import {defer} from '@shopify/remix-oxygen';
+import {CART_QUERY} from '~/queries/cart';
+
+async function getCart({storefront}, cartId) {
+  if (!storefront) {
+    throw new Error('missing storefront client in cart query');
+  }
+
+  const {cart} = await storefront.query(CART_QUERY, {
+    variables: {
+      cartId,
+      country: storefront.i18n.country,
+      language: storefront.i18n.language,
+    },
+    cache: storefront.CacheNone(),
+  });
+
+  return cart;
+}
 
 const shopifyConfig = {
   storefrontToken: '3b580e70970c4528da70c98e097c2fa0',
@@ -19,7 +38,6 @@ const shopifyConfig = {
   countryIsoCode: 'US',
   languageIsoCode: 'en',
 };
-
 
 export const links = () => {
   return [
@@ -41,9 +59,13 @@ export const meta = () => ({
   viewport: 'width=device-width,initial-scale=1',
 });
 
-export async function loader({context}) {
-  const layout = await context.storefront.query(LAYOUT_QUERY);
-  return {layout};
+export async function loader({context, request}) {
+  const cartId = await context.session.get('cartId');
+
+  return defer({
+    cart: cartId ? getCart(context, cartId) : undefined,
+    layout: await context.storefront.query(LAYOUT_QUERY),
+  });
 }
 
 export default function App() {
@@ -69,7 +91,6 @@ export default function App() {
     </ShopifyProvider>
   );
 }
-
 
 const LAYOUT_QUERY = `#graphql
   query layout {
