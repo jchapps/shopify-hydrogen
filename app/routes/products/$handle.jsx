@@ -1,6 +1,7 @@
 import {useLoaderData} from '@remix-run/react';
 import {json} from 'react-router';
 import {MediaFile} from '@shopify/hydrogen-react';
+import ProductOptions from '~/components/ProductOptions';
 
 export const loader = async ({params, context}) => {
   const {handle} = params;
@@ -40,7 +41,7 @@ export default function ProductHandle() {
               {product.vendor}
             </span>
           </div>
-          <h3>Product Options TODO</h3>
+          <ProductOptions options={product.options} />
           <div
             className="prose border-t border-gray-200 pt-6 text-black text-md"
             dangerouslySetInnerHTML={{__html: product.descriptionHtml}}
