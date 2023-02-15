@@ -3,6 +3,8 @@ import {Suspense} from 'react';
 import {Await} from '@remix-run/react';
 import {useMatches} from '@remix-run/react';
 import {CartLineItems, CartActions, CartSummary} from '~/components/Cart';
+// import Backdrop from '../../assets/jewels.jpeg';
+import Logo from '../../assets/logo.svg';
 
 function CartDrawer({cart, close}) {
   return (
@@ -55,7 +57,7 @@ function CartHeader({cart, openDrawer}) {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              className="w-5 h-5"
+              className="w-10 h-10"
             >
               <title>Bag</title>
               <path
@@ -80,18 +82,20 @@ export function Layout({children, title}) {
   const [root] = useMatches();
   const cart = root.data?.cart;
   return (
-    <div className="flex flex-col min-h-screen antialiased bg-neutral-50">
+    <div className="flex flex-col min-h-screen antialiased bg-neutral-50 items-between">
       <header
         role="banner"
-        className={`flex items-center h-16 p-6 md:p-8 lg:p-12 sticky backdrop-blur-lg z-40 top-0 justify-between w-full leading-none gap-4 antialiased transition shadow-sm`}
+        className={`flex items-center h-16 p-6 md:p-8 lg:p-12 sticky backdrop-blur-lg z-40 top-0 w-full leading-none gap-4 antialiased transition shadow-sm`}
       >
         <div className="flex gap-12 w-full items-center">
-          <a className="font-bold" href="/">
+          <img src={Logo} alt="logo" className="w-10 h-10" />
+          <a className="font-bold " href="/">
             {title}
           </a>
           <CartHeader cart={cart} openDrawer={openDrawer} />
         </div>
       </header>
+      {/* <div>{href = '/' && <img src={Backdrop} alt="Fashion"></img>}</div> */}
       <main
         role="main"
         id="mainContent"
