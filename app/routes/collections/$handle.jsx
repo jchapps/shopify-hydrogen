@@ -42,8 +42,8 @@ export default function Collection() {
   const {collection} = useLoaderData();
   return (
     <>
-      <header className="grid w-full gap-8 py-8 justify-items-start">
-        <h1 className="text-4xl whitespace-pre-wrap font-bold inline-block">
+      <header className="grid w-full gap-8 py-8 text-center	underline underline-offset-8">
+        <h1 className="text-2xl whitespace-pre-wrap font-bold inline-block">
           {collection.title}
         </h1>
 

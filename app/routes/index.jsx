@@ -39,7 +39,7 @@ export default function Index() {
                 to={`/collections/${collection.handle}`}
                 key={collection.id}
               >
-                <h2 className="font-medium text-copy text-center m-4">
+                <h2 className="text-xl text-copy text-center m-4">
                   {collection.title}
                 </h2>
                 <div className="grid gap-4">
