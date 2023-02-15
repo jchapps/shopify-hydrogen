@@ -17,21 +17,19 @@ export default function Index() {
   const {collections} = useLoaderData();
   return (
     <>
-      <section className="w-full gap-4 object-cover">
-        <img src={Backdrop} alt="Fashion" className="opacity-50"></img>
-        <div className="info-block">
-          <div className="flex flex-col shrink text-center max-w-full text-lg mx-40 bg-rose-200 text-white drop-shadow-md rounded-lg p-10 -mt-80">
-            <p>
-              Poly-Jewels provides exquisite accessories for special occassions.
-            </p>
-            <p>
-              Browse our unique hand made designs or contact us for custom
-              pieces.
-            </p>
-          </div>
+      <div className="">
+        <img src={Backdrop} alt="Fashion" className="opacity-50" />
+        <div className="text-center max-w-full text-lg m-auto bg-rose-200 text-white drop-shadow-md rounded-lg p-10 lg:-mt-80 mt-12">
+          <p>
+            Poly-Jewels provides exquisite accessories for special occassions.
+          </p>
+          <p>
+            Browse our unique hand made designs or contact us for custom pieces.
+          </p>
         </div>
-
-        <h1 className="text-xl text-center py-10 underline underline-offset-8 mt-48">
+      </div>
+      <section className="w-full gap-4 object-cover">
+        <h1 className="text-xl text-center py-10 underline underline-offset-8 lg:mt-48">
           Our Collections
         </h1>
         <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 false  sm:grid-cols-3 false false">

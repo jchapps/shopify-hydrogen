@@ -585,6 +585,12 @@ video {
 .mt-36{
   margin-top: 9rem;
 }
+.mt-12{
+  margin-top: 3rem;
+}
+.block{
+  display: block;
+}
 .inline-block{
   display: inline-block;
 }
@@ -1014,6 +1020,9 @@ video {
 .pt-6{
   padding-top: 1.5rem;
 }
+.pt-8{
+  padding-top: 2rem;
+}
 .text-left{
   text-align: left;
 }
@@ -1208,6 +1217,14 @@ video {
     visibility: hidden;
   }
 
+  .sm\:mt-12{
+    margin-top: 3rem;
+  }
+
+  .sm\:mt-0{
+    margin-top: 0px;
+  }
+
   .sm\:hidden{
     display: none;
   }
@@ -1223,6 +1240,11 @@ video {
   .sm\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .sm\:px-14{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
   .sm\:text-sm{
@@ -1260,6 +1282,14 @@ video {
   .md\:mx-auto{
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .md\:mt-12{
+    margin-top: 3rem;
+  }
+
+  .md\:block{
+    display: block;
   }
 
   .md\:hidden{
@@ -1356,6 +1386,15 @@ video {
     padding-bottom: 2rem;
   }
 
+  .md\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .md\:pt-20{
+    padding-top: 5rem;
+  }
+
   .md\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -1381,16 +1420,74 @@ video {
     top: 8rem;
   }
 
+  .lg\:right-40{
+    right: 10rem;
+  }
+
+  .lg\:top-40{
+    top: 10rem;
+  }
+
+  .lg\:top-72{
+    top: 18rem;
+  }
+
+  .lg\:right-72{
+    right: 18rem;
+  }
+
+  .lg\:right-48{
+    right: 12rem;
+  }
+
+  .lg\:right-60{
+    right: 15rem;
+  }
+
+  .lg\:left-72{
+    left: 18rem;
+  }
+
   .lg\:col-span-2{
     grid-column: span 2 / span 2;
+  }
+
+  .lg\:mt-12{
+    margin-top: 3rem;
+  }
+
+  .lg\:-mt-80{
+    margin-top: -20rem;
+  }
+
+  .lg\:mt-48{
+    margin-top: 12rem;
+  }
+
+  .lg\:block{
+    display: block;
   }
 
   .lg\:hidden{
     display: none;
   }
 
+  .lg\:h-max{
+    height: -moz-max-content;
+    height: max-content;
+  }
+
   .lg\:w-\[50\%\]{
     width: 50%;
+  }
+
+  .lg\:w-\[200px\]{
+    width: 200px;
+  }
+
+  .lg\:w-max{
+    width: -moz-max-content;
+    width: max-content;
   }
 
   .lg\:max-w-2xl{
