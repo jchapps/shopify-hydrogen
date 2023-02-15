@@ -1,5 +1,5 @@
 # Polygem Hydrogen Shopify Store
-Shopify store built in React-based framework Hydrogen.
+Shopify store built in Hydrogen and Tailwind.
 
 ## What's included
 
