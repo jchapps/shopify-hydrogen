@@ -89,13 +89,12 @@ export function Layout({children, title}) {
       >
         <div className="flex gap-12 w-full items-center">
           <img src={Logo} alt="logo" className="w-10 h-10" />
-          <a className="font-bold " href="/">
+          <a className="font-bold text-xl" href="/">
             {title}
           </a>
           <CartHeader cart={cart} openDrawer={openDrawer} />
         </div>
       </header>
-      {/* <div>{href = '/' && <img src={Backdrop} alt="Fashion"></img>}</div> */}
       <main
         role="main"
         id="mainContent"
