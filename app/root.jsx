@@ -10,7 +10,7 @@ import styles from './styles/app.css';
 import favicon from '../public/favicon.svg';
 import {Layout} from './components/Layout';
 import {Seo} from '@shopify/hydrogen';
-import {ShopifyProvider} from '@shopify/hydrogen-react';
+import {ShopifyProvider, CartProvider} from '@shopify/hydrogen-react';
 import {defer} from '@shopify/remix-oxygen';
 import {CART_QUERY} from '~/queries/cart';
 
@@ -32,8 +32,8 @@ async function getCart({storefront}, cartId) {
 }
 
 const shopifyConfig = {
-  storefrontToken: '3b580e70970c4528da70c98e097c2fa0',
-  storeDomain: 'https://hydrogen-preview.myshopify.com',
+  storefrontToken: '4977c5aa7301db3b510b109b3eec6e67',
+  storeDomain: 'https://polyjewels.myshopify.com',
   storefrontApiVersion: '2023-01',
   countryIsoCode: 'US',
   languageIsoCode: 'en',
