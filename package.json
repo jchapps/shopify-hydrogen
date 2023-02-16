@@ -1,50 +1,27 @@
 {
-  "name": "hello-world",
-  "private": true,
-  "sideEffects": false,
+  "name": "hello-world-js",
+  "description": "A simple example of a JavaScript project",
   "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev",
-    "typecheck": "tsc"
-  },
-  "prettier": "@shopify/prettier-config",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.3.0",
-    "@fortawesome/free-regular-svg-icons": "^6.3.0",
-    "@fortawesome/free-solid-svg-icons": "^6.3.0",
-    "@headlessui/react": "^1.7.10",
-    "@remix-run/node": "*",
-    "@remix-run/react": "*",
-    "@remix-run/vercel": "*",
-    "@vercel/node": "^2.6.2",
-    "@shopify/cli": "3.29.0",
-    "@shopify/cli-hydrogen": "^4.0.3",
-    "@shopify/hydrogen": "^2023.1.2",
-    "@shopify/remix-oxygen": "^1.0.2",
-    "graphql": "^16.6.0",
-    "graphql-tag": "^2.12.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "dev": "shopify hydrogen dev",
+    "build": "shopify hydrogen build",
+    "preview": "shopify hydrogen preview"
   },
   "devDependencies": {
-    "@remix-run/dev": "*",
-    "@remix-run/eslint-config": "*",
-    "@remix-run/serve": "*",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
-    "eslint": "^8.27.0",
-    "typescript": "^4.8.4",
-    "@shopify/prettier-config": "^1.1.2",
-    "autoprefixer": "^10.4.13",
-    "concurrently": "^7.6.0",
-    "eslint-plugin-hydrogen": "0.12.2",
-    "postcss": "^8.4.21",
-    "postcss-cli": "^10.1.0",
-    "prettier": "^2.8.4",
-    "tailwindcss": "^3.2.6"
+    "@shopify/cli": "latest",
+    "@shopify/cli-hydrogen": "latest",
+    "@tailwindcss/typography": "^0.5.4",
+    "@headlessui/react": "^1.7.7",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.7",
+    "vite": "^2.9.0"
   },
-  "engines": {
-    "node": ">=14"
+  "dependencies": {
+    "@shopify/hydrogen": "^0.25.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

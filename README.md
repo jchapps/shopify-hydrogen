@@ -1,38 +1,35 @@
-# Polygem Hydrogen Shopify Store
-Shopify store built in Hydrogen and Tailwind.
+# JavaScript Example
 
-## What's included
+Hydrogen is a React framework and SDK that you can use to build fast and dynamic Shopify custom storefronts.
 
-- Remix
-- Hydrogen
-- Oxygen
-- Shopify CLI
-- ESLint
-- Prettier
-- GraphQL generator
-- TypeScript and JavaScript flavors
-- Minimal setup of components and routes
+[Check out the docs](https://shopify.dev/custom-storefronts/hydrogen)
+
+[Run this template on StackBlitz](https://stackblitz.com/github/Shopify/hydrogen/tree/stackblitz/templates/hello-world-js)
 
 ## Getting started
 
 **Requirements:**
 
-- Node.js version 16.14.0 or higher
+- Node.js version 16.5.0 or higher
+- Yarn
 
 ```bash
-npm create @shopify/hydrogen@latest --template hello-world
+npm init @shopify/hydrogen@latest --template hello-world-ts
 ```
 
-Remember to update `.env` with your shop's domain and Storefront API token!
+Remember to update `hydrogen.config.js` with your shop's domain and Storefront API token!
 
 ## Building for production
 
 ```bash
-npm run build
+yarn build
 ```
 
-## Local development
+## Previewing a production build
+
+To run a local preview of your Hydrogen app in an environment similar to Oxygen, build your Hydrogen app and then run `yarn preview`:
 
 ```bash
-npm run dev
+yarn build
+yarn preview
 ```

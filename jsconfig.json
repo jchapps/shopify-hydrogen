@@ -1,29 +1,12 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ES2022"
-    ],
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "target": "ES2022",
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "app/*"
-      ]
-    }
+    "target": "es2020",
+    "module": "esnext",
+    "moduleResolution": "node16",
+    "lib": ["dom", "dom.iterable", "scripthost", "es2020"],
+    "jsx": "react",
+    "types": ["vite/client"]
   },
-  "include": [
-    "./**/*.js",
-    "./**/*.jsx"
-  ]
+  "exclude": ["node_modules", "dist"],
+  "include": ["**/*.js", "**/*.jsx"]
 }
