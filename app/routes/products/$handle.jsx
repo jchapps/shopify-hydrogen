@@ -78,6 +78,10 @@ export default function ProductHandle() {
             <span className="max-w-prose whitespace-pre-wrap inherit text-copy opacity-50 font-medium">
               {product.vendor}
             </span>
+            <div
+              className="prose border-t border-gray-200 pt-6 text-black text-md"
+              dangerouslySetInnerHTML={{__html: product.descriptionHtml}}
+            ></div>
           </div>
           <ProductOptions
             options={product.options}
@@ -97,11 +101,6 @@ export default function ProductHandle() {
               <ProductForm variantId={selectedVariant?.id} />
             </div>
           )}
-
-          <div
-            className="prose border-t border-gray-200 pt-6 text-black text-md"
-            dangerouslySetInnerHTML={{__html: product.descriptionHtml}}
-          ></div>
         </div>
       </div>
     </section>
