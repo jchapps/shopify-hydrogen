@@ -8,14 +8,14 @@ export default function ProductCard({product}) {
   return (
     <Link to={`/products/${product.handle}`}>
       <div className="grid gap-6">
-        <div className="shadow-sm rounded relative ">
+        <div className="shadow-sm rounded relative h-40 ">
           {isDiscounted && (
             <label className="subpixel-antialiased absolute top-0 right-0 m-4 text-right text-notice text-red-600 text-xs z-10">
               Sale
             </label>
           )}
           <Image
-            className="rounded hover:-translate-y-0.5 hover:shadow-lg duration-500 transform"
+            className="rounded hover:-translate-y-0.5 hover:shadow-lg duration-500 h-40 transform object-cover"
             data={product.variants.nodes[0].image}
             alt={product.title}
           />

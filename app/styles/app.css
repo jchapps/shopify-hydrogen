@@ -645,6 +645,9 @@ video {
 .h-32{
   height: 8rem;
 }
+.h-40{
+  height: 10rem;
+}
 .max-h-52{
   max-height: 13rem;
 }
@@ -687,6 +690,9 @@ video {
 }
 .w-11{
   width: 2.75rem;
+}
+.w-60{
+  width: 15rem;
 }
 .min-w-\[0\.75rem\]{
   min-width: 0.75rem;
