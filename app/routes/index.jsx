@@ -45,7 +45,7 @@ export default function Index() {
                 <div className="grid gap-4">
                   {collection?.image && (
                     <Image
-                      className="rounded hover:-translate-y-0.5 hover:shadow-lg duration-500 transform"
+                      className="rounded hover:-translate-y-1 hover:shadow-lg duration-500 transform"
                       alt={`Image of ${collection.title}`}
                       data={collection.image}
                       key={collection.id}

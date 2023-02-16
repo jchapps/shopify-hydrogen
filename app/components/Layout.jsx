@@ -31,7 +31,7 @@ function CartDrawer({cart, close}) {
                 </h2>
                 <button
                   onClick={close}
-                  className="inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none bg-black text-white w-full"
+                  className="inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none bg-rose-200 text-white w-full"
                 >
                   Continue shopping
                 </button>
