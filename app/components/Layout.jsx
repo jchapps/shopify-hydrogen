@@ -3,8 +3,8 @@ import {Suspense} from 'react';
 import {Await} from '@remix-run/react';
 import {useMatches} from '@remix-run/react';
 import {CartLineItems, CartActions, CartSummary} from '~/components/Cart';
-// import Backdrop from '../../assets/jewels.jpeg';
 import Logo from '../../assets/logo.svg';
+import Github from '../../assets/github.svg';
 
 function CartDrawer({cart, close}) {
   return (
@@ -82,29 +82,46 @@ export function Layout({children, title}) {
   const [root] = useMatches();
   const cart = root.data?.cart;
   return (
-    <div className="flex flex-col min-h-screen antialiased bg-neutral-50 items-between">
-      <header
-        role="banner"
-        className={`flex items-center h-16 p-6 md:p-8 lg:p-12 sticky backdrop-blur-lg z-40 top-0 w-full leading-none gap-4 antialiased transition shadow-sm`}
+    <>
+      <div className="flex flex-col min-h-screen antialiased bg-neutral-50 items-between">
+        <header
+          role="banner"
+          className={`flex items-center h-16 p-6 md:p-8 lg:p-12 sticky backdrop-blur-lg z-40 top-0 w-full leading-none gap-4 antialiased transition shadow-sm`}
+        >
+          <div className="flex gap-12 w-full items-center">
+            <img
+              src={Logo}
+              alt="logo"
+              className="w-10 h-10 bg-rose-200 rounded-2xl"
+            />
+            <a className="font-bold text-xl" href="/">
+              {title}
+            </a>
+            <CartHeader cart={cart} openDrawer={openDrawer} />
+          </div>
+        </header>
+        <main
+          role="main"
+          id="mainContent"
+          className="flex-grow p-6 md:p-8 lg:p-12"
+        >
+          {children}
+        </main>
+        <Drawer open={isOpen} onClose={closeDrawer}>
+          <CartDrawer cart={cart} close={closeDrawer} />
+        </Drawer>
+      </div>
+
+      <footer
+        className={`relative z-20 flex justify-center gap-6 items-center pt-8 pb-12 bg-neutral-50 px-6 sm:px-12 border-t-2`}
       >
-        <div className="flex gap-12 w-full items-center">
-          <img src={Logo} alt="logo" className="w-10 h-10 bg-rose-200 rounded-2xl" />
-          <a className="font-bold text-xl" href="/">
-            {title}
-          </a>
-          <CartHeader cart={cart} openDrawer={openDrawer} />
+        <div className="sm:pl-10 md:pl-16 bg-neutral-50">
+          © 2023 PolyJewels - Joshua Chappelow
         </div>
-      </header>
-      <main
-        role="main"
-        id="mainContent"
-        className="flex-grow p-6 md:p-8 lg:p-12"
-      >
-        {children}
-      </main>
-      <Drawer open={isOpen} onClose={closeDrawer}>
-        <CartDrawer cart={cart} close={closeDrawer} />
-      </Drawer>
-    </div>
+        <a href="https://www.github.com/jchapps">
+          <img className="w-5 h-5 text-rose-200" src={Github} />
+        </a>
+      </footer>
+    </>
   );
 }

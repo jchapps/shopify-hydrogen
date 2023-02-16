@@ -42,7 +42,7 @@ export default function ProductGrid({collection, url}) {
       {nextPage && (
         <div className="flex items-center justify-center mt-6">
           <button
-            className="inline-block rounded font-medium text-center py-3 px-6 border w-full cursor-pointer"
+            className="inline-block rounded font-medium text-center py-3 px-6 border w-full cursor-pointer bg-rose-200 text-white"
             disabled={fetcher.state !== 'idle'}
             onClick={fetchMoreProducts}
           >
