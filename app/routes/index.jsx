@@ -1,6 +1,6 @@
 import {useLoaderData, Link} from '@remix-run/react';
 import {Image} from '@shopify/hydrogen';
-import Backdrop from '../../assets/jewels.jpeg';
+import Backdrop from '../../public/jewels.jpeg';
 
 export const meta = () => {
   return {

@@ -3,8 +3,8 @@ import {Suspense} from 'react';
 import {Await} from '@remix-run/react';
 import {useMatches} from '@remix-run/react';
 import {CartLineItems, CartActions, CartSummary} from '~/components/Cart';
-import Logo from '../../assets/logo.svg';
-import Github from '../../assets/github.svg';
+import Logo from '../../public/logo.svg';
+import Github from '../../public/github.svg';
 
 function CartDrawer({cart, close}) {
   return (
