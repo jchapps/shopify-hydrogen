@@ -88,7 +88,7 @@ export function Layout({children, title}) {
         className={`flex items-center h-16 p-6 md:p-8 lg:p-12 sticky backdrop-blur-lg z-40 top-0 w-full leading-none gap-4 antialiased transition shadow-sm`}
       >
         <div className="flex gap-12 w-full items-center">
-          <img src={Logo} alt="logo" className="w-10 h-10" />
+          <img src={Logo} alt="logo" className="w-10 h-10 bg-rose-200 rounded-2xl" />
           <a className="font-bold text-xl" href="/">
             {title}
           </a>
