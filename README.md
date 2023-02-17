@@ -2,6 +2,9 @@
 
 Built in Hydrogen and Tailwind. (SAMPLE PRODUCTS)
 
+<img width="1456" alt="image" src="https://user-images.githubusercontent.com/104883545/219572846-6f62cf60-c8c4-478a-90b6-550dd7fe92d5.png">
+
+
 # JavaScript Example
 
 Hydrogen is a React framework and SDK that you can use to build fast and dynamic Shopify custom storefronts.
