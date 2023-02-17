@@ -19,9 +19,9 @@ export default function Collections() {
           Collections
         </h1>
       </header>
-      <section className="w-full gap-4 md:gap-10 grid px-6 md:px-8 lg:px-12">
+      <section className="w-full gap-4 md:gap-10 grid px-6 md:px-8 lg:px-12 mb-12">
         <Suspense>
-          <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 false  sm:grid-cols-3 false false">
+          <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 false mb-1  sm:grid-cols-3 false false">
             {collections.nodes.map((collection) => (
               <CollectionCard key={collection.id} collection={collection} />
             ))}
