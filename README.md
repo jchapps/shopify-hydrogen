@@ -1,6 +1,6 @@
 # Hydrogen Shopify Storefront 💍
 
-Built in Hydrogen and Tailwind.
+Built in Hydrogen and Tailwind. (SAMPLE PRODUCTS)
 
 # JavaScript Example
 
