@@ -31,8 +31,8 @@ export default function ProductCard({product}) {
                   className="line-through opacity-50"
                   withoutTrailingZeros
                   data={compareAtPrice}
-                />
-              )} */}
+                /> */}
+              {/* )} */}
             </span>
           </div>
         </div>
