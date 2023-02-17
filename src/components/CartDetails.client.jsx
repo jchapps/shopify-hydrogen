@@ -55,7 +55,7 @@ export function CartEmpty({ onClose }) {
       </h2>
       <button
         onClick={onClose}
-        className="inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none bg-black text-white w-full"
+        className="inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none bg-black text-white w-full hover:bg-rose-200 transition"
       >
         Continue shopping
       </button>
@@ -71,7 +71,7 @@ function CartCheckoutActions() {
         <Link
           to={checkoutUrl}
           width="full"
-          className="inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none bg-black text-white w-full"
+          className="inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none bg-black text-white w-full  hover:bg-rose-200 transition"
         >
           Continue to Checkout
         </Link>
