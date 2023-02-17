@@ -3,7 +3,7 @@ import { defineConfig } from '@shopify/hydrogen/config';
 export default defineConfig({
   shopify: {
     storeDomain: 'polyjewels.myshopify.com',
-    storefrontToken: '4977c5aa7301db3b510b109b3eec6e67',
+    storefrontToken: import.meta.env.PUBLIC_STOREFRONT_API_TOKEN,
     storefrontApiVersion: '2022-07',
   },
 });
