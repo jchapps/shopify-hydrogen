@@ -1,3 +1,7 @@
+# Hydrogen Shopify Storefront 💍
+
+Built in Hydrogen/Tailwind/MUI
+
 # JavaScript Example
 
 Hydrogen is a React framework and SDK that you can use to build fast and dynamic Shopify custom storefronts.
