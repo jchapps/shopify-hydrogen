@@ -1,4 +1,4 @@
-import { Link, Image, gql, useShopQuery, CacheLong } from "@shopify/hydrogen";
+import { Link, Image} from "@shopify/hydrogen";
 
 export default function CollectionCard({ collection }) {
 

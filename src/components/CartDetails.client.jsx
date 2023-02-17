@@ -2,7 +2,6 @@ import {
   useCart,
   useCartLine,
   CartLineProvider,
-  CartShopPayButton,
   CartLineQuantityAdjustButton,
   CartLinePrice,
   CartLineQuantity,

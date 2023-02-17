@@ -1,4 +1,4 @@
-import { Link, Image, Money } from "@shopify/hydrogen";
+import { Link, Image} from "@shopify/hydrogen";
 
 export default function ProductCard({product}) {
   const {price, compareAtPrice} = product.variants?.nodes[0] || {};
@@ -23,18 +23,6 @@ export default function ProductCard({product}) {
           <h3 className="max-w-prose text-copy w-full overflow-hidden whitespace-nowrap text-ellipsis ">
             {product.title}
           </h3>
-          <div className="flex gap-4">
-            <span className="max-w-prose whitespace-pre-wrap inherit text-copy flex gap-4">
-              {/* <Money withoutTrailingZeros data={price} />
-              {isDiscounted && (
-                <Money
-                  className="line-through opacity-50"
-                  withoutTrailingZeros
-                  data={compareAtPrice}
-                /> */}
-              {/* )} */}
-            </span>
-          </div>
         </div>
       </div>
     </Link>

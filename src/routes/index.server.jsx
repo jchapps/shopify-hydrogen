@@ -1,7 +1,6 @@
 import { Layout } from "../components/Layout.server";
 import { Suspense } from "react";
 import FeaturedCollections from "../components/FeaturedCollections.server";
-// import backdrop from '../../public/jewels.jpg';
 
 export default function Home() {
   return (

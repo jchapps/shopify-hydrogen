@@ -2,10 +2,6 @@ import {
   gql,
   useShopQuery,
   useRouteParams,
-  useServerAnalytics,
-  ShopifyAnalyticsConstants,
-  Seo,
-  ProductPrice
 } from "@shopify/hydrogen";
 
 import { Layout } from "../components/Layout.server";
