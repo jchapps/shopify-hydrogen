@@ -1,0 +1,1 @@
+{"version":3,"file":"af7a5f6d.js","sources":["../../../node_modules/@shopify/hydrogen/dist/esnext/components/ProductOptionsProvider/context.js"],"sourcesContent":["import { createContext } from 'react';\nexport const ProductOptionsContext = createContext(null);\n"],"names":["ProductOptionsContext","createContext"],"mappings":"wCACY,MAACA,EAAwBC,EAAa,QAAA,cAAC,IAAI"}

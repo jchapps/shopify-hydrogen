@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../node_modules/react-dom/client.js", "../../../app/entry.client.jsx"],
-  "sourcesContent": ["'use strict';\n\nvar m = require('react-dom');\nif (process.env.NODE_ENV === 'production') {\n  exports.createRoot = m.createRoot;\n  exports.hydrateRoot = m.hydrateRoot;\n} else {\n  var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;\n  exports.createRoot = function(c, o) {\n    i.usingClientEntryPoint = true;\n    try {\n      return m.createRoot(c, o);\n    } finally {\n      i.usingClientEntryPoint = false;\n    }\n  };\n  exports.hydrateRoot = function(c, h, o) {\n    i.usingClientEntryPoint = true;\n    try {\n      return m.hydrateRoot(c, h, o);\n    } finally {\n      i.usingClientEntryPoint = false;\n    }\n  };\n}\n", "import {RemixBrowser} from '@remix-run/react';\nimport {hydrateRoot} from 'react-dom/client';\n\nhydrateRoot(document, <RemixBrowser />);\n"],
-  "mappings": "6KAAA,IAAAA,EAAAC,EAAAC,GAAA,cAEA,IAAIC,EAAI,IAEND,EAAQ,WAAaC,EAAE,WACvBD,EAAQ,YAAcC,EAAE,YAEpB,IAAAC,ICNN,IAAAC,EAA0B,OAEJC,EAAA,UAAtB,eAAY,YAAU,OAACC,EAAA,EAAa,CAAE",
-  "names": ["require_client", "__commonJSMin", "exports", "m", "i", "import_client", "import_jsx_runtime", "RemixBrowser"]
-}
