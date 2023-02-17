@@ -1,7 +1,7 @@
 import { Layout } from "../components/Layout.server";
 import { Suspense } from "react";
 import FeaturedCollections from "../components/FeaturedCollections.server";
-import Backdrop from '../assets/jewels.jpg';
+import Backdrop from '../../public/assets/jewels.jpg';
 
 export default function Home() {
   return (
