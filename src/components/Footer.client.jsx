@@ -1,5 +1,5 @@
 import { useUrl, Link } from "@shopify/hydrogen";
-import github from "../assets/github.svg";
+import github from "../../public/assets/github.svg";
 
 export default function Footer() {
   const { pathname } = useUrl();

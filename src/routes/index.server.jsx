@@ -2,8 +2,7 @@ import { Layout } from "../components/Layout.server";
 import { Suspense } from "react";
 import FeaturedCollections from "../components/FeaturedCollections.server";
 import { Link } from "@shopify/hydrogen";
-import logo from "../assets/logo.svg";
-import Backdrop from '../assets/jewels.jpeg';
+import Backdrop from '../../public/assets/jewels.jpeg';
 
 export default function Home() {
   return (
