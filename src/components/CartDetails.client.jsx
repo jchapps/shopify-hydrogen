@@ -23,7 +23,7 @@ export function CartDetails({ onClose }) {
         aria-labelledby="cart-contents"
         className="px-4 pb-4 overflow-auto transition md:px-12"
       >
-        <ul className="pt-8 grid gap-6 md:gap-10">
+        <ul className="pt-8 grid gap-6 md:gap-10 border-2">
           {lines.map((line) => {
             return (
               <CartLineProvider key={line.id} line={line}>
@@ -73,7 +73,7 @@ function CartCheckoutActions() {
           width="full"
           className="inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none bg-black text-white w-full  hover:bg-rose-200 transition"
         >
-          Continue to Checkout
+          Checkout
         </Link>
       </div>
     </>
@@ -130,7 +130,7 @@ export function CartLineItem() {
             <span>
               <CartLinePrice as="span" />
             </span>
-            <div className="flex flex-col justify-start ">
+            <div className="flex flex-col justify-between ">
               {(merchandise?.selectedOptions || []).map((option) => (
                 <span key={option.name} className="last:mb-4 text-gray-500">
                   {option.value}
@@ -147,16 +147,16 @@ export function CartLineItem() {
               />
             </div>
             <button
-              type="button"
+              type="button red"
               onClick={() => linesRemove(lineId)}
-              className="h-[40px] w-[40px] border rounded flex justify-center items-center"
+              className="h-10 w-10 flex"
             >
               <span className="sr-only">Remove</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
-                className="w-[13px] h-[14px]"
-              >
+                className="w-10 h-10"
+                fill="#CA3433">
                 <title>Remove</title>
                 <path
                   transform="translate(4 4)"
@@ -182,18 +182,18 @@ function CartLineQuantityAdjust({ lineId, quantity }) {
         <CartLineQuantityAdjustButton
           adjust="decrease"
           aria-label="Decrease quantity"
-          className="h-[40px] flex justify-center items-center px-3 py-[0.125rem] transition text-primary/40 hover:text-primary disabled:pointer-events-all disabled:cursor-wait"
+          className="h-10 flex justify-center items-center px-3 py-[0.125rem] transition text-primary/40 hover:text-primary disabled:pointer-events-all disabled:cursor-wait"
         >
           &#8722;
         </CartLineQuantityAdjustButton>
         <CartLineQuantity
           as="div"
-          className="text-xs h-[40px] flex justify-center items-center text-center py-[0.125rem] px-2 text-primary/90"
+          className="text-s h-10 flex justify-center items-center text-center py-[0.125rem] px-2 text-primary/90"
         />
         <CartLineQuantityAdjustButton
           adjust="increase"
           aria-label="Increase quantity"
-          className="h-[40px] flex justify-center items-center px-3 py-[0.125rem] transition text-primary/40 hover:text-primary disabled:pointer-events-all disabled:cursor-wait"
+          className="h-10 flex justify-center items-center px-3 py-[0.125rem] transition text-primary/40 hover:text-primary disabled:pointer-events-all disabled:cursor-wait"
         >
           &#43;
         </CartLineQuantityAdjustButton>

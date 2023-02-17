@@ -17,7 +17,7 @@ export default function ProductDetails({ product }) {
               <ProductGallery media={product.media.nodes} />
             </div>
           </div>
-          <div className="sticky sm:mx-auto max-w-xl sm:max-w-[24rem] p-0 md:p-6 md:px-0 top-[6rem] lg:top-[8rem] xl:top-[10rem]">
+          <div className="sticky sm:mx-auto max-w-xl sm:max-w-96 p-0 md:p-6 md:px-0 top-24 lg:top-32 xl:top-40">
             <div className="grid gap-2">
               <h1 className="text-4xl font-bold leading-10 whitespace-normal">
                 {product.title}
