@@ -1,13 +1,10 @@
-import { useUrl, Link, useCart } from "@shopify/hydrogen";
+import { Link, useCart } from "@shopify/hydrogen";
 import { Drawer, useDrawer } from "./Drawer.client";
 import { CartDetails } from "./CartDetails.client";
-import logo from "../assets/logo.svg"
+import logo from "../assets/logo.svg";
 
 export default function Header({ shop }) {
-  const { pathname } = useUrl();
   const { isOpen, openDrawer, closeDrawer } = useDrawer();
-
-  const isHome = pathname === "/";
 
   return (
     <>
@@ -24,10 +21,7 @@ export default function Header({ shop }) {
         className={`flex items-center h-16 p-6 md:p-8 lg:p-12 sticky backdrop-blur-lg z-40 top-0 w-full leading-none gap-4 antialiased transition shadow-sm`}
       >
         <div className="grow">
-          <Link
-            className="font-bold text-2xl flex items-center gap-4"
-            to="/"
-          >
+          <Link className="font-bold text-2xl flex items-center gap-4" to="/">
             <img
               className="w-8 h-8 bg-rose-200 rounded-2xl"
               src={logo}
@@ -70,8 +64,8 @@ function IconBag() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
-      fill="currentColor"
-      className="w-7 h-7"
+      fill="rgb(254 205 211)"
+      className="w-8 h-8"
     >
       <title>Bag</title>
       <path

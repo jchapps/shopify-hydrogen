@@ -104,7 +104,7 @@ function PurchaseMarkup() {
         accessibleAddingToCartLabel="Adding item to your cart"
         disabled={isOutOfStock}
       >
-        <span className="bg-black text-white inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none w-full">
+        <span className="bg-black text-white inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none w-full hover:bg-rose-200 transition">
           {isOutOfStock ? "Sold out" : "Add to cart"}
         </span>
       </AddToCartButton>
@@ -114,7 +114,7 @@ function PurchaseMarkup() {
         </span>
       ) : (
         <BuyNowButton variantId={selectedVariant.id}>
-          <span className="inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none border w-full">
+          <span className="hover:bg-rose-200 transition inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none border w-full">
             Buy Now
           </span>
         </BuyNowButton>

@@ -11,7 +11,6 @@ export default function Footer() {
         © 2023 PolyJewels - Joshua Chappelow
       </div>
       <Link
-        className="opacity-75 hover:opacity-100 duration-500 transform hover:-translate-y-0.5"
         to="https://github.com/jchapps"
       >
         <img className="w-5 h-5 text-rose-200" src={github} alt="logo" />
